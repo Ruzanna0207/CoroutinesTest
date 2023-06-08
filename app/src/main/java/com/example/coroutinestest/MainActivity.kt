@@ -1,5 +1,6 @@
 package com.example.coroutinestest
 
+import android.content.pm.ActivityInfo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT //фиксированная портретная ориентация экрана
 //--------------------------------------------------------------------------------------------------
         val scopeOne = CoroutineScope(Dispatchers.Default) //диспатчер Default для создания корутин
 //--------------------------------------------------------------------------------------------------
